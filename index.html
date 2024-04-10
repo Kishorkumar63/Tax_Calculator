@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tax Calculator</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Tax Calculator</h2>
+      <form id="taxForm">
+        <div class="form-group">
+          <label for="grossIncome">Gross Annual Income:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="grossIncome"
+            placeholder="Enter Gross Income"
+          />
+          <span class="error-icon" title="Please enter a valid number"></span>
+        </div>
+        <div class="form-group">
+          <label for="extraIncome">Extra Income:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="extraIncome"
+            placeholder="Enter Extra Income"
+          />
+          <span class="error-icon" title="Please enter a valid number"></span>
+        </div>
+        <div class="form-group">
+          <label for="deductions">Deductions:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="deductions"
+            placeholder="Enter Deductions"
+          />
+          <span class="error-icon" title="Please enter a valid number"></span>
+        </div>
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <select class="form-control" id="age">
+            <option value="">Select Age Group</option>
+            <option value="<40"><40</option>
+            <option value="40-59">≥ 40 & < 60</option>
+            <option value="60+">≥ 60</option>
+          </select>
+          <span class="error-icon" title="This field is mandatory"></span>
+        </div>
+        <button type="button" class="btn btn-primary" id="calculateTax">
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="resultModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Tax Calculation Result</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="resultText"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
